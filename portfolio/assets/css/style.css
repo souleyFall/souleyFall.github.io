@@ -172,6 +172,9 @@ button { font: inherit; color: inherit; }
 .tl__place { font-size: .85rem; color: var(--muted); }
 .tl__body { padding: clamp(20px, 3vw, 32px); }
 .tl__body h3 { font-size: 1.25rem; margin-bottom: 14px; }
+.tl__lead { color: var(--muted); margin-bottom: 16px; }
+.tl__lead + ul { margin-top: 0; }
+.tl__body li strong { color: var(--text); font-weight: 600; }
 .at { color: var(--accent-2); font-weight: 600; }
 .tl__body ul { display: grid; gap: 8px; margin-bottom: 18px; }
 .tl__body li { position: relative; padding-left: 18px; color: var(--muted); }
