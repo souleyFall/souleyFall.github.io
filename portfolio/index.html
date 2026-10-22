@@ -1,613 +1,409 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr" data-theme="dark">
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>souley</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-
-  <!-- Favicons -->
-  <link href="assets/img/logosf.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Souleymane Fall — Développeur Full Stack & IA</title>
+  <meta name="description" content="Souleymane Fall, développeur Full Stack & IA (React, TypeScript, Node.js, Symfony, Python). Master Développement, Big Data & IA à l'IPSSI. En recherche d'une alternance de 12 mois.">
+  <meta name="theme-color" content="#0b0d12">
+  <meta property="og:title" content="Souleymane Fall — Développeur Full Stack & IA">
+  <meta property="og:description" content="Portfolio : projets web, mobile et IA. En recherche d'une alternance de 12 mois (3 semaines entreprise / 1 semaine école).">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/img/autoloc.webp">
+  <link rel="icon" href="assets/img/logosf.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    /* Thème appliqué avant le rendu pour éviter le flash */
+    try {
+      var t = localStorage.getItem('theme');
+      if (!t) t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      document.documentElement.dataset.theme = t;
+    } catch (e) {}
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Souleymane Fall",
+    "jobTitle": "Développeur Full Stack & IA",
+    "email": "mailto:souleymanefall2002@gmail.com",
+    "sameAs": ["https://github.com/souleyFall", "https://www.linkedin.com/in/souleyf"],
+    "alumniOf": ["IPSSI", "Université Sorbonne Paris Nord"]
+  }
+  </script>
 </head>
+<body>
+  <a class="skip" href="#main">Aller au contenu</a>
 
-<body class="index-page">
-
-  <header id="header" class="header d-flex align-items-center sticky-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">souley</h1>
+  <header class="header" id="header">
+    <div class="wrap header__in">
+      <a href="#top" class="brand" aria-label="Souleymane Fall — accueil">
+        <span class="brand__mark">sf</span><span class="brand__name">Souleymane Fall</span>
       </a>
 
-      <nav id="navmenu" class="navmenu">
+      <nav class="nav" id="nav" aria-label="Navigation principale">
         <ul>
-          <li><a href="#hero" class="active">accueil</a></li>
-          <li><a href="#about">à propos</a></li>
-          <li><a href="#portfolio">portfolio</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="#contact">contact</a></li>
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#experience">Expériences</a></li>
+          <li><a href="#projects">Projets</a></li>
+          <li><a href="#skills">Compétences</a></li>
+          <li><a href="#education">Formation</a></li>
+          <li class="nav__cta"><a href="#contact" class="btn btn--primary">Me contacter</a></li>
         </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
+      <div class="header__actions">
+        <button class="icon-btn" id="theme" type="button" aria-label="Changer de thème">
+          <svg class="i-sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="i-moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        </button>
+        <button class="icon-btn burger" id="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
 
-  <main class="main">
-
-    <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
-
-      <img src="assets/img/clavier.png" alt="" data-aos="fade-in">
-
-      <div class="container d-flex flex-column align-items-center justify-content-center text-center" data-aos="fade-up" data-aos-delay="100">
-        <h2>Je suis Souleymane FALL</h2>
-        <p><span class="typed" data-typed-items="Etudiant, Développeur, Concepteur"></span></p>
-      </div>
-
-    </section><!-- /Hero Section -->
-
-    <!-- About Section -->
-    <section id="about" class="about section">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-          <div class="col-md-6">
-
-            <div class="row justify-content-between gy-4">
-              <div class="col-lg-5">
-                <img src="assets/img/souley.png" class="img-fluid" alt="">
-              </div>
-              <div class="col-lg-7 about-info">
-                <p><strong>Nom: </strong> <span>Souleymane FALL</span></p>
-                <p><strong>Profil: </strong> <span>Développeur Full Stack</span></p>
-                <p><strong>Email: </strong> <span>souleymanefall2002@gmail.com</span></p>
-                <p><strong>Tel: </strong> <span>+33775721521</span></p>
-              </div>
-            </div>
-
-            <div class="skills-content skills-animation">
-
-              <h5>Compétences</h5>
-
-              <div class="progress">
-                <span class="skill"><span>HTML</span> <i class="val">100%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div><!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"><span>CSS</span> <i class="val">90%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div><!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"><span>Front End : JavaScript - ReactJS - Bootstrap</span> <i class="val">75%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div><!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"><span>Back end : PHP - nodeJS</span> <i class="val">75%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div><!-- End Skills Item -->
-              <div class="progress">
-                <span class="skill"><span>App Mobile : REACT NATIVE</span> <i class="val">75%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div><!-- End Skills Item -->
-              <div class="progress">
-                <span class="skill"><span>LOGICIEL : JAVA </span> <i class="val">75%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div><!-- End Skills Item -->
-
-            </div>
-          </div>
-
-          <div class="col-md-6">
-            <div class="about-me">
-              <h4>About me</h4>
-              <p>
-                Passioné du code, des algorithmes, des tests et des debugging sans fin, j’ai acquis une solide expérience à travers plusieurs projets académiques, personnelles et aussi de l’autoformation.J'ai développé une certaine facilité à assimiler de nouveaux langages et les intégrer dans mes projets. Je suis aujourd'hui développeur full stack encore en formation et c'est toujours un plaisir de taper dans ce clavier pour construire des choses utiles et formidables
-              </p>
-            </div>
-          </div>
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="wrap hero__in">
+        <p class="badge"><span class="badge__dot" aria-hidden="true"></span> Recherche une alternance de 12 mois · 3 sem. entreprise / 1 sem. école</p>
+        <h1 class="hero__title">Je construis des produits web<br> et <span class="grad">IA</span> utiles, de bout en bout.</h1>
+        <p class="hero__lead">
+          Je suis <strong>Souleymane Fall</strong>, développeur Full Stack &amp; IA. Deux stages en SaaS (LegalTech, automatisation métier), un Master Développement, Big Data &amp; IA en cours, et des projets qui vont du front React à un modèle de deep learning déployé.
+        </p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#projects">Voir mes projets</a>
+          <a class="btn btn--ghost" href="assets/files/CV_Souleymane_Fall.pdf" download>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16"/></svg>
+            Télécharger mon CV
+          </a>
         </div>
-
+        <ul class="hero__stack" aria-label="Technologies principales">
+          <li>TypeScript</li><li>React</li><li>Node.js</li><li>Symfony</li><li>Python</li><li>Docker</li>
+        </ul>
       </div>
+    </section>
 
-    </section><!-- /About Section -->
+    <!-- CHIFFRES -->
+    <section class="facts" aria-label="En bref">
+      <div class="wrap facts__grid">
+        <div class="fact"><strong>2</strong><span>stages Full Stack<br>(SaaS &amp; IA)</span></div>
+        <div class="fact"><strong>7</strong><span>projets web, mobile<br>et IA</span></div>
+        <div class="fact"><strong>Master</strong><span>Développement,<br>Big Data &amp; IA</span></div>
+        <div class="fact"><strong>FR · EN</strong><span>Français natif<br>Anglais B2</span></div>
+      </div>
+    </section>
 
-    <!-- Resume Section -->
-    <section id="resume" class="resume section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>PARCOURS &lt/&gt</h2>
-        <div class="pb-0">
-          <p><em>J'ai commencé mon parcours à l'Université sorbonne paris nord où j'ai passé mon Bac+1 et mon Bac+2, ces deux années m'ont permis de saisir pleinement les bases de l'informatique, du web et de la programmation.
-            Désirant me spéciaiser et pratiquer un peu plus, j'ai rejoint IPSSI, école supérieure d'informatique en tant que Développeur Full Stack pour pouvoir évaluer mes compétences en alternance en entreprise.
-          </em></p>
-            <a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.univ-spn.fr/&ved=2ahUKEwjDx9b34f-JAxX_AfsDHWpuL8kQFnoECA0QAQ&usg=AOvVaw3WLzFEX9jLv1CCvs3YF6pS" target="_blank">univ-spn</a>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
-            <a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://ecole-ipssi.com/&ved=2ahUKEwiK-52M4v-JAxUGbKQEHXqyO6UQFnoECA4QAQ&usg=AOvVaw0veeAnujNGf7BjAvsFb4Mw" target="_blank">IPSSI</a>
-        </div><!-- Edn Resume Item -->
-      </div><!-- End Section Title -->
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <div id="uspn">
-              <div class="resume-item">
-                <h4>&nbsp;&nbsp;DEUG Mathématiques &amp; Informatique</h4>
-                <h5>&nbsp;&nbsp;2022 - 2024</h5>
-                <p><em>&nbsp;&nbsp;Université Sorbonne Paris Nord, Paris, France</em></p>
-                <p>&nbsp;&nbsp;Initiation à l'algorithmique, aux structures de données, à la</p>
-                <p>&nbsp;&nbsp;programmation fonctionnelle et orientée objet, au développement web</p>
-                <p>&nbsp;&nbsp;et de logiciel mais également à l'administration de réseau et aux</p>
-                <p>&nbsp;&nbsp;systémes réseaux</p>
-              </div><!-- Edn Resume Item -->
-            </div>
-            <div id="dev">
-              <div class="resume-item">
-                <h4>&nbsp;&nbsp;Bachelor 3 Dev. Full Stack</h4>
-                <h5>&nbsp;&nbsp;2024 - présent</h5>
-                <p><em>&nbsp;&nbsp;IPSSI, Paris, France</em></p>
-                <p></p>
-              </div><!-- Edn Resume Item -->
-            </div>
+    <!-- À PROPOS -->
+    <section class="section" id="about">
+      <div class="wrap about">
+        <div class="about__media reveal">
+          <img src="assets/img/souley.webp" width="317" height="280" alt="Portrait de Souleymane Fall" loading="lazy">
+        </div>
+        <div class="about__text reveal">
+          <p class="eyebrow">À propos</p>
+          <h2>Full Stack avec une vraie corde IA</h2>
+          <p>
+            Je suis passé des mathématiques et de l'informatique (Sorbonne Paris Nord) à une formation Full Stack en alternance, puis à un Master Développement, Big Data &amp; IA à l'IPSSI. Ce parcours me permet de relier deux mondes&nbsp;: livrer des fonctionnalités propres côté front et back, et intégrer l'IA là où elle apporte de la valeur.
+          </p>
+          <p>
+            En entreprise, j'ai travaillé sur une plateforme SaaS LegalTech avec des briques d'IA, et sur des workflows métier automatisés avec intégrations tierces. Je cherche une alternance de 12 mois pour continuer à livrer en équipe, avec des revues de code, des tests et un souci de qualité.
+          </p>
+          <ul class="about__points">
+            <li>Front &amp; back en TypeScript (React, Node.js, Fastify, NestJS) et PHP (Symfony)</li>
+            <li>IA appliquée : transfer learning, API LLM (Gemini), webscraping, data</li>
+            <li>Qualité : tests, revues de code, CI/CD, Docker</li>
+          </ul>
+          <div class="about__links">
+            <a class="link" href="https://github.com/souleyFall" target="_blank" rel="noopener">GitHub ↗</a>
+            <a class="link" href="https://www.linkedin.com/in/souleyf" target="_blank" rel="noopener">LinkedIn ↗</a>
           </div>
         </div>
       </div>
+    </section>
 
-    </section><!-- /Resume Section -->
-
-    <!-- Stats Section -->
-    <section id="stats" class="stats section accent-background">
-
-      <img src="assets/img/stats-bg.jpg" alt="" data-aos="fade-in">
-
-      <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="0" class="purecounter">232</span>
-              <p>projets réalisés</p>
-            </div>
-          </div><!-- End Stats Item -->
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="4" data-purecounter-duration="0" class="purecounter">521</span>
-              <p>projets en cours de réalisation</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item text-center w-100 h-100">
-              <span>+3</span>
-              <p>ans de code/debugging</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item text-center w-100 h-100">
-              <span>+5</span>
-              <p>languages de programmation</p>
-            </div>
-          </div><!-- End Stats Item -->
-
+    <!-- EXPÉRIENCES -->
+    <section class="section section--alt" id="experience">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <p class="eyebrow">Expériences</p>
+          <h2>Ce que j'ai livré en entreprise</h2>
         </div>
 
+        <ol class="timeline">
+          <li class="tl reveal">
+            <div class="tl__meta"><span class="tl__date">Juil. – Sept. 2026</span><span class="tl__place">Stage · SaaS LegalTech · IA</span></div>
+            <div class="tl__body card">
+              <h3>Développeur Full Stack <span class="at">@ Bridgeness</span></h3>
+              <ul>
+                <li>Développement d'une plateforme SaaS LegalTech intégrant des outils d'intelligence artificielle.</li>
+                <li>Contribution à la conception fonctionnelle du produit, recherches juridiques et technologiques.</li>
+                <li>Participation aux phases de tests, de recette et d'amélioration continue.</li>
+                <li>Gestion de projet, veille technologique et échanges avec les partenaires.</li>
+              </ul>
+              <p class="tags"><span>IA</span><span>SaaS</span><span>Recette &amp; tests</span></p>
+            </div>
+          </li>
+          <li class="tl reveal">
+            <div class="tl__meta"><span class="tl__date">Sept. – Déc. 2025</span><span class="tl__place">Stage · Full Stack</span></div>
+            <div class="tl__body card">
+              <h3>Développeur Full Stack <span class="at">@ Cash Flow Positif</span></h3>
+              <ul>
+                <li>Conception et implémentation de fonctionnalités front-end et back-end.</li>
+                <li>Conception et automatisation de workflows métier.</li>
+                <li>Intégration de services tiers : webhooks, API externes, services SaaS.</li>
+                <li>Bonnes pratiques : tests, revues de code, qualité et performance.</li>
+              </ul>
+              <p class="tags"><span>React</span><span>TypeScript</span><span>Tailwind</span><span>Symfony</span><span>Node.js</span><span>Fastify</span><span>Prisma</span></p>
+            </div>
+          </li>
+        </ol>
       </div>
+    </section>
 
-    </section><!-- /Stats Section -->
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Portfolio</h2>
-        <p>Quelques uns de mes projets</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">App</li>
-            <li data-filter=".filter-branding">Site</li>
-          </ul><!-- End Portfolio Filters -->
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/autoloc.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Autoloc</h4>
-                <p>Web app de réservation de voitures</p>
-                <a href="assets/img/autoloc.png" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="https://github.com/souleyFall/autoloc" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/ebook-store.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>e-book store</h4>
-                <p>site e-commerce - vente d'e-books de cours tech</p>
-                <a href="assets/img/ebook-store.png" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="https://github.com/souleyFall/ebook-store" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/tekz.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>TEKZ</h4>
-                <p>BLOG - un blog d'articles informatiques</p>
-                <a href="assets/img/tekz.png" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="https://github.com/souleyFall/tekz" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/movify.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>MOVIFY</h4>
-                <p>Moteur de recherche de film</p>
-                <a href="assets/img/movify.jpg" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="https://github.com/souleyFall/movify" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/taskManager.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Task Manager</h4>
-                <p>Gestionnaire de tâche</p>
-                <a href="assets/img/taskManager.png" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="https://github.com/souleyFall/taskManager" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/qrcode.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>QR Code Générator</h4>
-                <p>Un générateur de QR code</p>
-                <a href="assets/img/qrcode.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="https://github.com/souleyFall/qrcode-generator" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/facture.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Bill Générator</h4>
-                <p>Générateur de facture</p>
-                <a href="assets/img/facture.jpg" title="Branding 3" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="https://github.com/souleyFall/bill-generator" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/encours.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Réseau Social</h4>
-                <p>Un réseau social minimaliste - Tech : React Native - PHP</p>
-                <a href="assets/img/encours.jpg" title="App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="encours.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-          </div><!-- End Portfolio Container -->
-          
+    <!-- PROJETS -->
+    <section class="section" id="projects">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <p class="eyebrow">Projets</p>
+          <h2>Une sélection de ce que j'ai construit</h2>
+          <p class="section__sub">IA, web full stack, mobile et design. Chaque projet a son code sur GitHub.</p>
         </div>
 
-      </div>
+        <div class="filters reveal" role="group" aria-label="Filtrer les projets">
+          <button class="chip is-active" type="button" data-filter="all" aria-pressed="true">Tous</button>
+          <button class="chip" type="button" data-filter="ia" aria-pressed="false">IA &amp; Data</button>
+          <button class="chip" type="button" data-filter="web" aria-pressed="false">Web</button>
+          <button class="chip" type="button" data-filter="mobile" aria-pressed="false">Mobile</button>
+          <button class="chip" type="button" data-filter="design" aria-pressed="false">Design</button>
+        </div>
 
-    </section><!-- /Portfolio Section -->
-
-
-    <!-- Faq Section -->
-    <section id="faq" class="faq section">
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="content px-xl-5">
-              <h3><span>Frequently Asked </span><strong>Questions</strong></h3>
-              <p>
-                Réponses à quelques questions que l'on me pose le plus souvent
-              </p>
+        <div class="projects" id="grid">
+          <!-- IA : DiagnoPlante -->
+          <article class="project reveal" data-cat="ia">
+            <div class="project__cover cover cover--green" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10z"/><path d="M2 21c0-3 1.9-5.5 5-6.5"/></svg>
+              <span class="cover__tag">IA · Computer vision</span>
             </div>
+            <div class="project__body">
+              <h3>DiagnoPlante</h3>
+              <p class="project__sub">Détecteur de maladies de plantes par IA</p>
+              <p>Classification d'images de feuilles (tomate, pomme de terre) par <strong>transfer learning</strong> : ResNet18 pré-entraîné sur ImageNet, exposé via une API FastAPI.</p>
+              <p class="tags"><span>Python</span><span>FastAPI</span><span>Hugging Face</span><span>ResNet18</span></p>
+              <div class="project__links">
+                <a class="link" href="https://github.com/souleyFall" target="_blank" rel="noopener">Code ↗</a>
+                <a class="link" href="https://github.com/souleyFall" target="_blank" rel="noopener">Démo ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Mobile : SmartWardrobe -->
+          <article class="project reveal" data-cat="mobile ia">
+            <div class="project__cover cover cover--violet" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3L3 6.5l2.5 4 2-1V21h9V9.5l2 1 2.5-4L16 3c-.5 1.5-2 2.5-4 2.5S8.5 4.5 8 3z"/></svg>
+              <span class="cover__tag">Mobile · IA générative</span>
+            </div>
+            <div class="project__body">
+              <h3>SmartWardrobe</h3>
+              <p class="project__sub">App mobile de recommandation de tenues</p>
+              <p>Recommandations de tenues selon la météo. J'ai implémenté le <strong>service IA</strong>, l'intégration de Gemini et l'écran de résultat.</p>
+              <p class="tags"><span>React Native</span><span>Gemini API</span><span>AsyncStorage</span><span>Open-Meteo</span></p>
+              <div class="project__links">
+                <a class="link" href="https://github.com/souleyFall" target="_blank" rel="noopener">Code ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Web : Task Manager -->
+          <article class="project reveal" data-cat="web">
+            <div class="project__cover">
+              <img src="assets/img/taskManager.webp" width="1000" height="485" alt="Capture d'écran de Task Manager" loading="lazy">
+              <span class="cover__tag">Web · Full stack</span>
+            </div>
+            <div class="project__body">
+              <h3>Task Manager</h3>
+              <p class="project__sub">Gestionnaire de tâches full stack</p>
+              <p>Application web typée de bout en bout : requêtes avec <strong>TanStack Query</strong>, formulaires <strong>react-hook-form</strong>, validation <strong>Zod</strong>.</p>
+              <p class="tags"><span>TypeScript</span><span>React</span><span>Node.js</span><span>Express</span></p>
+              <div class="project__links">
+                <a class="link" href="https://github.com/souleyFall/taskManager" target="_blank" rel="noopener">Code ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Web : AutoLoc -->
+          <article class="project reveal" data-cat="web">
+            <div class="project__cover">
+              <img src="assets/img/autoloc.webp" width="1000" height="688" alt="Capture d'écran d'AutoLoc" loading="lazy">
+              <span class="cover__tag">Web · Symfony</span>
+            </div>
+            <div class="project__body">
+              <h3>AutoLoc</h3>
+              <p class="project__sub">Application web de réservation de voitures</p>
+              <p>Application MVC complète : catalogue, réservation et base relationnelle gérée avec Doctrine.</p>
+              <p class="tags"><span>Symfony</span><span>Twig</span><span>Doctrine</span><span>MySQL</span><span>Bootstrap</span></p>
+              <div class="project__links">
+                <a class="link" href="https://github.com/souleyFall/autoloc" target="_blank" rel="noopener">Code ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Web : Task List Manager -->
+          <article class="project reveal" data-cat="web">
+            <div class="project__cover cover cover--blue" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M3.5 6l1 1 2-2M3.5 12l1 1 2-2M3.5 18l1 1 2-2"/></svg>
+              <span class="cover__tag">Web · API NestJS</span>
+            </div>
+            <div class="project__body">
+              <h3>Task List Manager</h3>
+              <p class="project__sub">Gestionnaire de listes de tâches</p>
+              <p>Front Vue.js et API NestJS avec <strong>authentification JWT</strong> complète (inscription, connexion).</p>
+              <p class="tags"><span>TypeScript</span><span>Vue.js</span><span>NestJS</span><span>MySQL</span><span>Sequelize</span></p>
+              <div class="project__links">
+                <a class="link" href="https://github.com/souleyFall" target="_blank" rel="noopener">Code ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Data : Webscraping -->
+          <article class="project reveal" data-cat="ia">
+            <div class="project__cover cover cover--amber" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg>
+              <span class="cover__tag">Data · Python</span>
+            </div>
+            <div class="project__body">
+              <h3>Webscraping</h3>
+              <p class="project__sub">Collecte d'un palmarès sportif</p>
+              <p>Extraction automatisée d'environ <strong>580 équipes</strong> sur ~24 pages paginées (scrapethissite.com).</p>
+              <p class="tags"><span>Python</span><span>Scraping</span><span>Data</span></p>
+              <div class="project__links">
+                <a class="link" href="https://github.com/souleyFall" target="_blank" rel="noopener">Code ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Design : Figma -->
+          <article class="project reveal" data-cat="design">
+            <div class="project__cover cover cover--pink" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z"/><path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z"/><path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z"/><path d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z"/><path d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z"/></svg>
+              <span class="cover__tag">Design · UX</span>
+            </div>
+            <div class="project__body">
+              <h3>Génération de recettes</h3>
+              <p class="project__sub">Design d'une application mobile</p>
+              <p>Design complet d'une application mobile de génération de recettes, de la structure des écrans jusqu'aux maquettes.</p>
+              <p class="tags"><span>Figma</span><span>UX</span><span>Mobile</span></p>
+              <div class="project__links">
+                <a class="link" href="https://github.com/souleyFall" target="_blank" rel="noopener">Maquettes ↗</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <p class="projects__more reveal">
+          Autres projets : <a class="link" href="https://github.com/souleyFall/ebook-store" target="_blank" rel="noopener">E-book store</a> ·
+          <a class="link" href="https://github.com/souleyFall/movify" target="_blank" rel="noopener">Movify</a> ·
+          <a class="link" href="https://github.com/souleyFall/tekz" target="_blank" rel="noopener">TEKZ</a> ·
+          <a class="link" href="https://github.com/souleyFall?tab=repositories" target="_blank" rel="noopener">Tous mes dépôts ↗</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- COMPÉTENCES -->
+    <section class="section section--alt" id="skills">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <p class="eyebrow">Compétences</p>
+          <h2>Ma boîte à outils</h2>
+        </div>
+        <div class="skills">
+          <div class="skill card reveal">
+            <h3>Développement</h3>
+            <ul class="pills"><li>TypeScript</li><li>React JS</li><li>React Native</li><li>Node.js</li><li>Express</li><li>Fastify</li><li>NestJS</li><li>Symfony</li></ul>
           </div>
-
-          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-
-            <div class="faq-container">
-              <div class="faq-item faq-active">
-                <h3><span class="num">1.</span> <span>Quels langages utilises-tu ?</span></h3>
-                <div class="faq-content">
-                  <p>C, JavaScript, React js, Node js, Express js, React Native, PHP, Java</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3><span class="num">2.</span> <span>Quels sytémes de base de données utilises-tu ?</span></h3>
-                <div class="faq-content">
-                  <p>j'en ai déjà utilisé deux au cours de mes différents projets à savoir mySQL et mariaDB</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3><span class="num">3.</span> <span>As tu un peu d'expérience sur les technologies cloud?</span></h3>
-                <div class="faq-content">
-                  <p>j'ai déjà survolé google Cloud lors d'un projet et je suis entrain de passer une certification AWS sur inkedin learning</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3><span class="num">4.</span> <span>As tu eu une expérience en entreprise?</span></h3>
-                <div class="faq-content">
-                  <p>J'ai travaillé trois mois en tant que assistant bureautique dans un multi-services où j'ai pu aiguisé mes compétences sur le pack logiciel microsoft et depuis Novembre 2024, j'offre mes services bénévolement à une association dont les ambitions me tiennent beaucoup à coeur</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3><span class="num">5.</span> <span>Pourquoi avoir quitté la licence ?</span></h3>
-                <div class="faq-content">
-                  <p>Voulant un peu plus de pratique, j'ai voulu exploré le monde de l'entreprise, c'est pour celà que après le DEUG (2e année), j'ai opté pour une formation en alternance</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i> 
-              </div><!-- End Faq item-->
-
-            </div>
-
+          <div class="skill card reveal">
+            <h3>IA &amp; Data</h3>
+            <ul class="pills"><li>Python</li><li>Analyse de données</li><li>Webscraping</li><li>Machine learning</li><li>Deep learning</li></ul>
           </div>
-        </div>
-
-      </div>
-
-    </section><!-- /Faq Section -->
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials section accent-background">
-
-      <img src="assets/img/testimonials-bg.jpg" class="testimonials-bg" alt="">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              }
-            }
-          </script>
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/code.png" class="testimonial-img" alt="">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Le développement c'est 10% de code et 90% entrain de chercher pourquoi celui ci ne marche pas</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/code.png" class="testimonial-img" alt="">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Toujours coder comme si la personne qui finit par maintenir votre code sera un psychopathe violent qui sait où vous habitez</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/code.png" class="testimonial-img" alt="">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>“Le code et la cathédrale, c’est un peu la même chose - d’abord on les construit, ensuite on prie.”</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/code.png" class="testimonial-img" alt="">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Algorithme : Mot utilisé par les programmeurs quand ils ne veulent pas expliquer ce qu’ils ont fait</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/code.png" class="testimonial-img" alt="">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Dans une équipe de projet logiciel de dix personnes, il y a probablement trois personnes qui produisent suffisamment de bugs pour en faire des producteurs nets négatifs.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/code.png" class="testimonial-img" alt="">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Quand j’ai écrit ce code, seuls dieu et moi comprenions ce que j’ai fait. Maintenant, seul dieu le sait.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/code.png" class="testimonial-img" alt="">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Il y a 10 sortes de personnes dans le monde : Ceux qui connaissent le binaire et ceux qui ne le connaissent pas.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/code.png" class="testimonial-img" alt="">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Aucun code n’a zéro défaut</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
+          <div class="skill card reveal">
+            <h3>Bases de données</h3>
+            <ul class="pills"><li>MySQL</li><li>MongoDB</li></ul>
           </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-
-    </section><!-- /Testimonials Section -->
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
-        <p>Au plaisir d'échanger avec vous prochainement</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="info-wrap" data-aos="fade-up" data-aos-delay="200">
-          <div class="row gy-5">
-
-            <div class="col-lg-4">
-              <div class="info-item d-flex align-items-center">
-                <i class="bi bi-geo-alt flex-shrink-0"></i>
-                <div>
-                  <h3>Adresse</h3>
-                  <p>4 allée de dordogne, 91300 Massy</p>
-                </div>
-              </div>
-            </div><!-- End Info Item -->
-
-            <div class="col-lg-4">
-              <div class="info-item d-flex align-items-center">
-                <a href="tel:+33775721521"><i class="bi bi-telephone flex-shrink-0"></i></a>
-                <div>
-                  <h3>Téléphone</h3>
-                  <p>+33 7 75 72 15 21</p>
-                </div>
-              </div>
-            </div><!-- End Info Item -->
-            <div class="col-lg-4">
-              <div class="info-item d-flex align-items-center">
-                <a href="mailto:souleymanefall2002@gmail.com"><i class="bi bi-envelope flex-shrink-0"></i></a>
-                <div>
-                  <h3>Email</h3>
-                  <p>souleymanefall2002@gmail.com</p>
-                </div>
-              </div>
-            </div><!-- End Info Item -->
-            <div class="col-lg-4">
-              <div class="info-item d-flex align-items-center">
-                <a href="https://api.whatsapp.com/send/?phone=+33775721521&text=Bonjour+Souleymane+!+votre+profil+nous+intéresse,+Au+plaisir+d%E2%80%99échanger+avec+vous.&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer"><i class="bi bi-telephone flex-shrink-0"></i></a>
-                <div>
-                  <h3>Whatsapps</h3>
-                  <p>souley</p>
-                </div>
-              </div>
-            </div><!-- End Info Item -->
-
+          <div class="skill card reveal">
+            <h3>DevOps</h3>
+            <ul class="pills"><li>Git</li><li>Docker</li><li>Kubernetes</li><li>CI/CD</li></ul>
+          </div>
+          <div class="skill card reveal">
+            <h3>Outils &amp; design</h3>
+            <ul class="pills"><li>Jira</li><li>Figma</li><li>UX</li><li>Bootstrap</li></ul>
           </div>
         </div>
       </div>
+    </section>
 
-    </section><!-- /Contact Section -->
+    <!-- FORMATION -->
+    <section class="section" id="education">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <p class="eyebrow">Formation</p>
+          <h2>Parcours académique</h2>
+        </div>
+        <div class="edu">
+          <article class="card edu__item reveal">
+            <span class="edu__date">Depuis fév. 2026</span>
+            <h3>Master Développement, Big Data &amp; IA</h3>
+            <p>IPSSI — Paris 12e</p>
+          </article>
+          <article class="card edu__item reveal">
+            <span class="edu__date">Janv. – Déc. 2025</span>
+            <h3>Bachelor 3 Développeur Full Stack</h3>
+            <p>IPSSI — Paris 12e</p>
+          </article>
+          <article class="card edu__item reveal">
+            <span class="edu__date">Juin 2024</span>
+            <h3>Licence Mathématiques &amp; Informatique</h3>
+            <p>Université Sorbonne Paris Nord</p>
+          </article>
+        </div>
+        <p class="edu__extra reveal"><strong>Certifications :</strong> Bootstrap, UX &nbsp;·&nbsp; <strong>Langues :</strong> français (langue maternelle), anglais (B2)</p>
+      </div>
+    </section>
 
+    <!-- CONTACT -->
+    <section class="section contact" id="contact">
+      <div class="wrap">
+        <div class="contact__box reveal">
+          <p class="eyebrow">Contact</p>
+          <h2>Travaillons ensemble</h2>
+          <p class="contact__lead">Je cherche une alternance de 12 mois (3 semaines en entreprise / 1 semaine en école). Une question, une opportunité&nbsp;? Écrivez-moi, je réponds vite.</p>
+          <div class="contact__cta">
+            <a class="btn btn--primary btn--lg" href="mailto:souleymanefall2002@gmail.com">souleymanefall2002@gmail.com</a>
+            <a class="btn btn--ghost btn--lg" href="tel:+33743521541">+33 7 43 52 15 41</a>
+          </div>
+          <ul class="contact__list">
+            <li><a href="https://www.linkedin.com/in/souleyf" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://github.com/souleyFall" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="assets/files/CV_Souleymane_Fall.pdf" download>CV (PDF)</a></li>
+            <li><span>Montigny-le-Bretonneux (78)</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer id="footer" class="footer accent-background">
-
-    <div class="container">
-      <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">souley</strong> <span>All Rights Reserved</span></p>
-      </div>
-      <div class="social-links d-flex justify-content-center">
-        <a href="https://www.linkedin.com/in/souleyf"><i class="bi bi-linkedin"></i></a>
-      </div>
-      <div class="credits">
-        Designed by <a href="https://www.linkedin.com/in/souleyf" target="_blank">souley</a>
-      </div>
+  <footer class="footer">
+    <div class="wrap footer__in">
+      <p>© <span id="year">2026</span> Souleymane Fall</p>
+      <a href="#top" class="footer__top">Haut de page ↑</a>
     </div>
-
   </footer>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-
 </body>
-
 </html>
