@@ -7,9 +7,9 @@
   <meta name="description" content="Souleymane Fall, développeur Full Stack & IA (React, TypeScript, Node.js, Symfony, Python). Master Développement, Big Data & IA à l'IPSSI. En recherche d'une alternance de 12 mois.">
   <meta name="theme-color" content="#0b0d12">
   <meta property="og:title" content="Souleymane Fall — Développeur Full Stack & IA">
-  <meta property="og:description" content="Portfolio : projets web, mobile et IA. En recherche d'une alternance de 12 mois (3 semaines entreprise / 1 semaine école).">
+  <meta property="og:description" content="Portfolio : airpost (outil de recherche d'alternance complet, démo en ligne), projets web, mobile et IA. En recherche d'une alternance de 12 mois (3 semaines entreprise / 1 semaine école).">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/img/autoloc.webp">
+  <meta property="og:image" content="assets/img/airpost.jpg">
   <link rel="icon" href="assets/img/logosf.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -48,6 +48,7 @@
         <ul>
           <li><a href="#about">À propos</a></li>
           <li><a href="#experience">Expériences</a></li>
+          <li><a href="#airpost">airpost</a></li>
           <li><a href="#projects">Projets</a></li>
           <li><a href="#skills">Compétences</a></li>
           <li><a href="#education">Formation</a></li>
@@ -75,10 +76,11 @@
         <p class="badge"><span class="badge__dot" aria-hidden="true"></span> Recherche une alternance de 12 mois · 3 sem. entreprise / 1 sem. école</p>
         <h1 class="hero__title">Je construis des produits web<br> et <span class="grad">IA</span> utiles, de bout en bout.</h1>
         <p class="hero__lead">
-          Je suis <strong>Souleymane Fall</strong>, développeur Full Stack &amp; IA. Deux stages en SaaS (dont un en tant que seul développeur sur un produit LegalTech), un Master Développement, Big Data &amp; IA en cours, et des projets qui vont du front React à un modèle de deep learning déployé.
+          Je suis <strong>Souleymane Fall</strong>, développeur Full Stack &amp; IA. Deux stages en SaaS (dont un en tant que seul développeur sur un produit LegalTech), un Master Développement, Big Data &amp; IA en cours, et et des projets qui vont du front React à un modèle de deep learning déployé, dont <strong>airpost</strong>, un outil complet que je conçois pour ma propre recherche d'alternance.
         </p>
         <div class="hero__cta">
-          <a class="btn btn--primary" href="#projects">Voir mes projets</a>
+          <a class="btn btn--primary" href="#airpost">Découvrir airpost</a>
+          <a class="btn btn--ghost" href="#projects">Voir mes projets</a>
           <a class="btn btn--ghost" href="assets/files/CV_Souleymane_Fall.pdf" download>
             <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16"/></svg>
             Télécharger mon CV
@@ -94,7 +96,7 @@
     <section class="facts" aria-label="En bref">
       <div class="wrap facts__grid">
         <div class="fact"><strong>2</strong><span>stages Full Stack<br>(SaaS &amp; IA)</span></div>
-        <div class="fact"><strong>7</strong><span>projets web, mobile<br>et IA</span></div>
+        <div class="fact"><strong>8</strong><span>projets web, mobile<br>et IA</span></div>
         <div class="fact"><strong>Master</strong><span>Développement,<br>Big Data &amp; IA</span></div>
         <div class="fact"><strong>FR · EN</strong><span>Français natif<br>Anglais B2</span></div>
       </div>
@@ -119,7 +121,7 @@
             <li>Front &amp; back en TypeScript (React, Node.js, Fastify, NestJS) et PHP (Symfony)</li>
             <li>Intégrations : webhooks, Yousign, Pappers, Gemini, Nockee</li>
             <li>IA appliquée : transfer learning, API LLM (Gemini), webscraping, data</li>
-            <li>Qualité : tests, revues de code, CI/CD, Docker</li>
+            <li>Qualité : tests, revues de code, CI/CD, Docker (plus de 800 tests sur airpost)</li>
           </ul>
           <div class="about__links">
             <a class="link" href="https://github.com/souleyFall" target="_blank" rel="noopener">GitHub ↗</a>
@@ -168,6 +170,55 @@
             </div>
           </li>
         </ol>
+      </div>
+    </section>
+
+    <!-- PROJET PHARE : AIRPOST -->
+    <section class="section flagship-section" id="airpost">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <p class="eyebrow">Projet phare</p>
+          <h2>airpost, mon outil de recherche d'alternance</h2>
+          <p class="section__sub">Un produit complet, du back-end à la vidéo de présentation : il collecte les offres, les note, prépare mes lettres et suit mes candidatures. Je l'utilise pour ma propre recherche.</p>
+        </div>
+
+        <article class="flagship card reveal">
+          <a class="flagship__media" href="https://airpost-steel.vercel.app/" target="_blank" rel="noopener" aria-label="Ouvrir la page de présentation d'airpost (nouvel onglet)">
+            <img src="assets/img/airpost.jpg" width="1920" height="1080" alt="Interface d'airpost avec des données fictives : liste d'offres notées sur 100 et détail d'une offre" loading="lazy">
+            <span class="flagship__play" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              Voir la présentation en vidéo
+            </span>
+          </a>
+
+          <div class="flagship__body">
+            <ul class="flagship__stats" aria-label="airpost en chiffres">
+              <li><strong>7</strong><span>sources d'offres</span></li>
+              <li><strong>0</strong><span>envoi automatique</span></li>
+              <li><strong>800+</strong><span>tests automatisés</span></li>
+              <li><strong>44</strong><span>décisions documentées</span></li>
+            </ul>
+
+            <p>Chaque matin, airpost collecte les offres par des <strong>API officielles</strong> et mes alertes e-mail, les <strong>note selon mon profil</strong> avec Gemini, rédige une lettre dont les <strong>garde-fous refusent toute invention</strong>, prépare un <strong>brouillon Gmail</strong> et me relance au bon moment. <strong>C'est moi qui envoie</strong>, toujours.</p>
+
+            <ul class="flagship__points">
+              <li><strong>Back-end :</strong> NestJS, Prisma et PostgreSQL, authentification par session, protection CSRF, limitation de débit.</li>
+              <li><strong>Interface :</strong> React et Vite en application installable (PWA), tableau de bord des résultats.</li>
+              <li><strong>Fiabilité de l'IA :</strong> modèles de secours quand un quota est atteint, voyants de santé des sources.</li>
+              <li><strong>Sérieux :</strong> plus de 800 tests, registre des risques, conformité RGPD, aucun scraping de LinkedIn, Indeed ou Welcome to the Jungle.</li>
+              <li><strong>Démo publique :</strong> une version sans serveur avec des données fictives, isolée par le navigateur (aucune requête réseau possible).</li>
+            </ul>
+
+            <p class="tags"><span>TypeScript</span><span>NestJS</span><span>React</span><span>Prisma</span><span>PostgreSQL</span><span>Docker</span><span>Gemini API</span><span>Gmail API</span></p>
+
+            <div class="flagship__cta">
+              <a class="btn btn--primary" href="https://airpost-steel.vercel.app/demo/" target="_blank" rel="noopener">Essayer la démo ↗</a>
+              <a class="btn btn--ghost" href="https://airpost-steel.vercel.app/" target="_blank" rel="noopener">Page de présentation ↗</a>
+              <a class="btn btn--ghost" href="https://airpost-steel.vercel.app/guide/" target="_blank" rel="noopener">Guide d'installation ↗</a>
+              <a class="btn btn--ghost" href="https://github.com/souleyFall/airpost" target="_blank" rel="noopener">Code ↗</a>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -328,15 +379,15 @@
         <div class="skills">
           <div class="skill card reveal">
             <h3>Développement</h3>
-            <ul class="pills"><li>TypeScript</li><li>React JS</li><li>React Native</li><li>Node.js</li><li>Express</li><li>Fastify</li><li>NestJS</li><li>Symfony</li></ul>
+            <ul class="pills"><li>TypeScript</li><li>React JS</li><li>React Native</li><li>Node.js</li><li>Express</li><li>Fastify</li><li>NestJS</li><li>Prisma</li><li>Symfony</li></ul>
           </div>
           <div class="skill card reveal">
             <h3>IA &amp; Data</h3>
-            <ul class="pills"><li>Python</li><li>Analyse de données</li><li>Webscraping</li><li>Machine learning</li><li>Deep learning</li></ul>
+            <ul class="pills"><li>Python</li><li>API LLM (Gemini)</li><li>Analyse de données</li><li>Webscraping</li><li>Machine learning</li><li>Deep learning</li></ul>
           </div>
           <div class="skill card reveal">
             <h3>Bases de données</h3>
-            <ul class="pills"><li>MySQL</li><li>MongoDB</li></ul>
+            <ul class="pills"><li>PostgreSQL</li><li>MySQL</li><li>MongoDB</li></ul>
           </div>
           <div class="skill card reveal">
             <h3>DevOps</h3>
@@ -392,6 +443,7 @@
           <ul class="contact__list">
             <li><a href="https://www.linkedin.com/in/souleyf" target="_blank" rel="noopener">LinkedIn</a></li>
             <li><a href="https://github.com/souleyFall" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://airpost-steel.vercel.app/" target="_blank" rel="noopener">airpost</a></li>
             <li><a href="assets/files/CV_Souleymane_Fall.pdf" download>CV (PDF)</a></li>
             <li><span>Montigny-le-Bretonneux (78)</span></li>
           </ul>
